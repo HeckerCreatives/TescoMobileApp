@@ -21,6 +21,7 @@
 
 # Visual Studio cache directory
 .vs/
+*.tgz
 
 # Gradle cache directory
 .gradle/
