@@ -69,7 +69,7 @@ public class ResultController : MonoBehaviour
 
     private void AnimatePercentImg()
     {
-        LeanTween.value(percentImg.gameObject, fill => percentImg.fillAmount = fill, 0f, 1f, 0.25f).setEase(LeanTweenType.easeOutCubic);
+        LeanTween.value(percentImg.gameObject, fill => percentImg.fillAmount = fill, 0f, scanExam.Score / dashboardController.AnswerList.Count, 0.25f).setEase(LeanTweenType.easeOutCubic);
     }
 
     IEnumerator SendScore()

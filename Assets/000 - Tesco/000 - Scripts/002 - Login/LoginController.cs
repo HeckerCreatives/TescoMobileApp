@@ -120,37 +120,37 @@ public class LoginController : MonoBehaviour
                         }
                         else
                         {
+                            loadingNoBg.SetActive(false);
                             errorController.ShowError("Error logging in there's an error on response. Error: " + response, () =>
                             {
                                 ResetLogin();
-                                loadingNoBg.SetActive(false);
                             });
                         }
                     }
                     catch (Exception ex)
                     {
+                        loadingNoBg.SetActive(false);
                         errorController.ShowError("Error logging in there's an error on response. Error: " + ex.Message, () =>
                         {
                             ResetLogin();
-                            loadingNoBg.SetActive(false);
                         });
                     }
                 }
                 else
                 {
+                    loadingNoBg.SetActive(false);
                     errorController.ShowError("Error logging in! please check your internet connection and try again. Error: " + response, () =>
                     {
                         ResetLogin();
-                        loadingNoBg.SetActive(false);
                     });
                 }
             }
             else
             {
+                loadingNoBg.SetActive(false);
                 errorController.ShowError("Error logging in! please check your internet connection and try again. Error: " + loginRequest.result, () =>
                 {
                     ResetLogin();
-                    loadingNoBg.SetActive(false);
                 });
             }
         }
@@ -192,37 +192,37 @@ public class LoginController : MonoBehaviour
                     }
                     else
                     {
+                        loadingNoBg.SetActive(false);
                         errorController.ShowError("Error logging in there's an error on response. Error: " + response, () =>
                         {
                             ResetLogin();
-                            loadingNoBg.SetActive(false);
                         });
                     }
                 }
                 catch (Exception ex)
                 {
+                    loadingNoBg.SetActive(false);
                     errorController.ShowError("Error logging in there's an error on response. Error: " + ex.Message, () =>
                     {
                         ResetLogin();
-                        loadingNoBg.SetActive(false);
                     });
                 }
             }
             else
             {
+                loadingNoBg.SetActive(false);
                 errorController.ShowError("Error logging in! please check your internet connection and try again. Error: " + response, () =>
                 {
                     ResetLogin();
-                    loadingNoBg.SetActive(false);
                 });
             }
         }
         else
         {
+            loadingNoBg.SetActive(false);
             errorController.ShowError("Error logging in! please check your internet connection and try again. Error: " + topicRequest.result, () =>
             {
                 ResetLogin();
-                loadingNoBg.SetActive(false);
             });
         }
     }

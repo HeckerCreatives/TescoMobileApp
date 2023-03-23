@@ -20,8 +20,8 @@ public class DashboardController : MonoBehaviour
     [SerializeField] private CanvasGroup dashboardCG;
 
     [Header("DROPDOWNS")]
-    [SerializeField] private Dropdown topicDropdown;
-    [SerializeField] private Dropdown questionnaireDropdown;
+    [SerializeField] private TMP_Dropdown topicDropdown;
+    [SerializeField] private TMP_Dropdown questionnaireDropdown;
 
     [Header("TMP")]
     [SerializeField] private TextMeshProUGUI nameTMP;
@@ -98,6 +98,8 @@ public class DashboardController : MonoBehaviour
             yield break;
 
         topicDropdown.AddOptions(userData.TopicData);
+        topicDropdown.RefreshShownValue();
+        topicDropdown.Show();
 
         topicDropdown.interactable = true;
     }
@@ -133,6 +135,8 @@ public class DashboardController : MonoBehaviour
         if (questionnaireData.Count <= 0) yield break;
 
         questionnaireDropdown.AddOptions(questionnaireData);
+        questionnaireDropdown.RefreshShownValue();
+        questionnaireDropdown.Show();
         questionnaireDropdown.interactable = true;
     }
 
